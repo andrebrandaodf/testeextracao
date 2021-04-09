@@ -7,15 +7,7 @@ import lombok.Value;
 @Value
 public class Funcionario implements Comparable<Funcionario>{
 	
-	  String codigo;
-	  String cpf;
-	  String cnpj;
-	  String nit;
-	  String funcao;
-	  String id;
-	  String chave;
-	  String nome;
-	  String numero;
+	  String codigo,cpf,cnpj,nit,funcao,id,chave,nome,numero;
 
 	@Override
 	public int compareTo(Funcionario o) {
