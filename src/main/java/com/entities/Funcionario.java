@@ -1,47 +1,25 @@
 package com.entities;
 
-import java.io.Serializable;
+import lombok.Builder;
+import lombok.Value;
 
-public class Funcionario implements Serializable{
-	private static final long serialVersionUID = 1L;
+@Builder(toBuilder = true)
+@Value
+public class Funcionario implements Comparable<Funcionario>{
 	
-	private String matricula;
-	private String nome;
-	private String cpf;
-	
-	public Funcionario() {
-		
-	}
-	
-	public Funcionario(String matricula, String nome, String cpf) {
-		super();
-		this.matricula = matricula;
-		this.nome = nome;
-		this.cpf = cpf;
-	}
-	
-	public String getMatricula() {
-		return matricula;
-	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	  String codigo;
+	  String cpf;
+	  String cnpj;
+	  String nit;
+	  String funcao;
+	  String id;
+	  String chave;
+	  String nome;
+	  String numero;
 
 	@Override
-	public String toString() {
-		return "Funcionario [Matrícula:" + matricula + ", Nome:" + nome + ", CPF:" + cpf + "]";
+	public int compareTo(Funcionario o) {
+		return id.compareTo(o.id);
 	}
 	  
 }
