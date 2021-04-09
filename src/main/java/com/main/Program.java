@@ -18,7 +18,9 @@ public class Program {
 
 	public static void main(String[] args) throws IOException {
 
+		
 		String caminho = "/home/andrebrandao/opt/techstone/Tarefas/extracaoMANAD/TesteManad/Teste.txt";
+		
 		
 		List<Funcionario> list = new ArrayList<Funcionario>();
 
@@ -37,9 +39,10 @@ public class Program {
 				String matricula = vetor[4];
 				String nome = vetor[7];
 				String cpf = vetor[5];
-				String funcao = vetor[10];
+				String funcao = vetor[11];
 
-				funcionario = Funcionario.builder().numero(numero).nome(nome).chave(matricula).cpf(cpf).cnpj(cnpj).funcao(funcao).codigo("").nit("").id(UUID.randomUUID().toString()).build(); 
+				funcionario = Funcionario.builder().numero(numero).nome(nome).chave(matricula).cpf(cpf).cnpj(cnpj).funcao(funcao).codigo("").nit("")
+						.id(UUID.randomUUID().toString()).build(); 
 				log.debug("Matrícula: {} Nome: {}, CPF: {}, Função: {}", matricula, nome, cpf, funcao);
 
 
@@ -56,12 +59,11 @@ public class Program {
 					
 					pw.println("================================== Funcionário criado ==================================");
 					
-					list.add(funcionario);
-					linha = br.readLine();
-					
 					pw.close();
 					fw.close();
-				
+					
+					list.add(funcionario);
+					linha = br.readLine();
 			}
 
 			System.out.println("Funcionários: ");
