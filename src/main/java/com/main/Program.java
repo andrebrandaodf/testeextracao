@@ -46,7 +46,7 @@ public class Program {
 				log.debug("Matrícula: {} Nome: {}, CPF: {}, Função: {}", matricula, nome, cpf, funcao);
 
 
-					FileWriter fw = new FileWriter("/home/andrebrandao/opt/techstone/Tarefas/extracaoMANAD/TesteManad/Teste1.txt");
+					FileWriter fw = new FileWriter("/home/andrebrandao/opt/techstone/Tarefas/extracaoMANAD/TesteManad/Teste1.txt",true);
 					PrintWriter pw = new PrintWriter(fw);
 					pw.println("================================== Criando Funcionário ==================================");
 					
